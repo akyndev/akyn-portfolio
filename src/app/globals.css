@@ -2,32 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 226 100% 95%;
+    --foreground: 226 5% 0%;
+    --card: 226 50% 90%;
+    --card-foreground: 226 5% 10%;
+    --popover: 226 100% 95%;
+    --popover-foreground: 226 100% 0%;
+    --primary: 226 100% 68%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 226 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 188 30% 85%;
+    --muted-foreground: 226 5% 35%;
+    --accent: 188 30% 80%;
+    --accent-foreground: 226 5% 10%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 226 5% 90%;
+    --border: 226 30% 50%;
+    --input: 226 30% 18%;
+    --ring: 226 100% 68%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 226 5% 90%;
+    --card: 226 50% 0%;
+    --card-foreground: 226 5% 90%;
+    --popover: 226 50% 5%;
+    --popover-foreground: 226 5% 90%;
+    --primary: 226 100% 68%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 226 30% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 188 30% 15%;
+    --muted-foreground: 226 5% 60%;
+    --accent: 188 30% 15%;
+    --accent-foreground: 226 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 226 5% 90%;
+    
+    --border: 226 30% 18%;
+    --input: 226 30% 18%;
+    --ring: 226 100% 68%;
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+.embla {
+  max-width: 1320px;
+  --slide-spacing: 1.3rem;  
+  --slide-size: 100%;
+}
+@media screen and (min-width: 640px) {
+  .embla {
+    /* Change base variable used for element variable */
+    padding: 1rem;
+    --slide-size: 45.5%;
   }
+}
+
+.embla__container {
+  backface-visibility: hidden;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  padding-left: var(--slide-spacing);
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-button {
+  display: none
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background: rgb(128, 127, 127);
 }
