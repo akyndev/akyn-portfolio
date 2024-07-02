@@ -1,5 +1,4 @@
 import localFont from "next/font/local"
-import { Noto_Serif_Display } from "next/font/google"
 export const general_sans = localFont({
   src: [
     {
