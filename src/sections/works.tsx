@@ -30,7 +30,7 @@ const works = [
 
 const Works = () => {
   // const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel({ startIndex: 1, loop: true });
+  const [emblaRef, ] = useEmblaCarousel({ startIndex: 1, loop: true });
 
   return (
     <div id="works" className="space-y-6">

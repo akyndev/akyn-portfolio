@@ -1,7 +1,6 @@
 import Header from "@/components/header";
-import { ModeToggle } from "@/components/mode-toggle";
+import Navbar from "@/components/navbar";
 import { Separator } from "@/components/ui/separator";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 import CTA from "@/sections/cta";
 import Footer from "@/sections/footer";
 import Hero from "@/sections/hero";
@@ -31,6 +30,7 @@ export default function Home() {
         <CTA />
         <Footer />
       </div>
+      <Navbar />
     </main>
     // <div className="py-32 w-full"></div>
   );

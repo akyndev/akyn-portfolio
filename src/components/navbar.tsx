@@ -1,4 +1,10 @@
 "use client";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { useInnerWidth } from "@/lib/hooks/useInnerWidth";
 import { cubicBezier, motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -14,12 +20,6 @@ import {
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 const navIcons = [
   {
@@ -64,7 +64,7 @@ const Navbar = () => {
   const bottom = useTransform(
     scrollYProgress,
     // Map x from these values:
-    [0, 0.25],
+    [0, 0.018],
     // Into these values:
     [-46, 18],
     { ease: cubicBezier(0.32, 0, 0.67, 0) },
@@ -72,7 +72,7 @@ const Navbar = () => {
   const opacity = useTransform(
     scrollYProgress,
     // Map x from these values:
-    [0, 0.25],
+    [0, 0.018],
     // Into these values:
     [0, 1],
     { ease: cubicBezier(0.16, 1, 0.3, 1) },
