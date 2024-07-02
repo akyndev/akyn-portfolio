@@ -1,12 +1,12 @@
 "use client"
 import SectionHeader from "@/components/section-header"
-import { ArrowLeft, ArrowRight, Badge, Star } from "lucide-react"
-import React from "react"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Carousel, CarouselApi, CarouselContent, CarouselItem, useCarousel } from "@/components/ui/carousel"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Carousel, CarouselApi, CarouselContent, CarouselItem, useCarousel } from "@/components/ui/carousel"
+import { cn } from "@/lib/utils"
+import { ArrowLeft, ArrowRight, Heart, Star } from "lucide-react"
+import React from "react"
 
 const testimonials = [
   {
@@ -62,9 +62,9 @@ const Testimonials = () => {
   }, [api])
 
   return (
-    <div>
+    <div id="testimonials">
       <SectionHeader label="Happy clients" description="Projects I'm currently working on">
-        <Badge strokeWidth={1} />
+        <Heart strokeWidth={1} />
       </SectionHeader>
 
       <div className="container pt-8">

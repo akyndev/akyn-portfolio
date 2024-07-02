@@ -4,49 +4,65 @@
 
 @layer base {
   :root {
-    --background: 226 100% 95%;
+    --background: 240, 5%, 96%;
     --foreground: 226 5% 0%;
-    --card: 226 50% 90%;
+
+    --card: 0, 0%, 99%;
     --card-foreground: 226 5% 10%;
+
     --popover: 226 100% 95%;
     --popover-foreground: 226 100% 0%;
-    --primary: 226 100% 68%;
-    --primary-foreground: 0 0% 0%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 240, 5%, 96%;
+
     --secondary: 226 30% 70%;
     --secondary-foreground: 0 0% 0%;
+
     --muted: 188 30% 85%;
     --muted-foreground: 226 5% 35%;
+
+    --nav: 0 0% 100%;
+
     --accent: 188 30% 80%;
     --accent-foreground: 226 5% 10%;
+
     --destructive: 0 100% 30%;
     --destructive-foreground: 226 5% 90%;
-    --border: 226 30% 50%;
+
+    --border: 240, 6%, 80%;
     --input: 226 30% 18%;
     --ring: 226 100% 68%;
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 226 5% 90%;
-    --card: 226 50% 0%;
+    --background: 226 50% 0%;
+    --foreground: 240, 5%, 96%;
+
+    --card: 240, 6%, 5%;
     --card-foreground: 226 5% 90%;
+
     --popover: 226 50% 5%;
     --popover-foreground: 226 5% 90%;
-    --primary: 226 100% 68%;
-    --primary-foreground: 0 0% 0%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 228, 6%, 16%;
+
     --secondary: 226 30% 10%;
     --secondary-foreground: 0 0% 100%;
+
     --muted: 188 30% 15%;
     --muted-foreground: 226 5% 60%;
+
+    --nav: 240 10% 3.9%;
+
     --accent: 188 30% 15%;
     --accent-foreground: 226 5% 90%;
+
     --destructive: 0 100% 30%;
     --destructive-foreground: 226 5% 90%;
-    
-    --border: 226 30% 18%;
-    --input: 226 30% 18%;
-    --ring: 226 100% 68%;
-    --radius: 0.5rem;
+
+    --border: 240, 6%, 20%;
   }
 }
 
@@ -59,10 +75,9 @@
   }
 }
 
-
 .embla {
   max-width: 1320px;
-  --slide-spacing: 1.3rem;  
+  --slide-spacing: 1.3rem;
   --slide-size: 100%;
 }
 @media screen and (min-width: 640px) {
@@ -88,7 +103,7 @@ body::-webkit-scrollbar {
   width: 6px;
 }
 body::-webkit-scrollbar-button {
-  display: none
+  display: none;
 }
 
 body::-webkit-scrollbar-thumb {

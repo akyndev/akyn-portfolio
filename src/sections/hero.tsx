@@ -12,8 +12,8 @@ const Hero = () => {
               Enabling Success for Businesses Worldwide.
             </h2>
           </div>
-          <p className="text-white/80">
-            I am Aiden Wolfe, a Web Designer with over 10 years of experience crafting digital solutions that empower
+          <p className="text-foreground/80">
+            I am Joseph Akinlade, a Web Designer with over 10 years of experience crafting digital solutions that empower
             businesses globally. Specializing in user-centric design and strategic optimization. My commitment to
             excellence has earned me a reputation as a trusted partner in the online business community.
           </p>

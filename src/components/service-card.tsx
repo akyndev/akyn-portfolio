@@ -15,7 +15,7 @@ const ServiceCard = () => {
           </Button>
         </div>
         <div className="flex items-start gap-1 sm:gap-3 flex-col sm:flex-row sm:items-center">
-          <h2 className="text-lg sm:text-xl text-white font-medium">Framer Landing Page Design</h2>
+          <h2 className="text-lg sm:text-xl text-foreground font-medium">Framer Landing Page Design</h2>
           <Badge variant="secondary">Secondary</Badge>
         </div>
         <div>

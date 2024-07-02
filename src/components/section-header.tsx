@@ -13,7 +13,7 @@ const SectionHeader = ({ children, label, description }: SectionHeaderProps) => 
       <div className="flex flex-col justify-center gap-1">
         {children}
         <h2 className="font-medium text-[20px] capitalize">{label}</h2>
-        <p className="text-sm text-white/80">{description}</p>
+        <p className="text-sm text-foreground/80">{description}</p>
       </div>
     </div>
   )
