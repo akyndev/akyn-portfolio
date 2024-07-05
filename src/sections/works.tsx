@@ -1,36 +1,35 @@
 "use client";
 import SectionHeader from "@/components/section-header";
-import Slider from "@/components/slider";
-import { BadgeCheck, CloudCog } from "lucide-react";
-import React from "react";
-import Image from "next/image";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import Link from "next/link";
-import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
+import { CloudCog } from "lucide-react";
+import Image from "next/image";
+import Akyn from "/public/images/akyn.png";
+import New from "/public/images/home-port.jpg";
+import WrebblePort from "/public/images/wrebble-port.png";
+import Wrebble from "/public/images/wrebble.png";
 
 const works = [
   {
-    src: "https://framerusercontent.com/images/3OdienqZZvCsPDnoz9TvTTV3yE.jpg?scale-down-to=1024",
+    src: New,
     alt: "My work",
   },
   {
-    src: "https://framerusercontent.com/images/KxmdOXjJIpxAsHLJB5HJbiylni4.jpg?scale-down-to=1024",
+    src: WrebblePort,
     alt: "My work",
   },
   {
-    src: "https://framerusercontent.com/images/3OdienqZZvCsPDnoz9TvTTV3yE.jpg?scale-down-to=1024",
+    src: Wrebble,
     alt: "My work",
   },
   {
-    src: "https://framerusercontent.com/images/9wKpHKP6GEyr175Kqt41hBKKY.jpg?scale-down-to=1024",
+    src: Akyn,
     alt: "My work",
   },
 ];
 
 const Works = () => {
   // const { slides, options } = props
-  const [emblaRef, ] = useEmblaCarousel({ startIndex: 1, loop: true });
+  const [emblaRef] = useEmblaCarousel({ startIndex: 1, loop: true });
 
   return (
     <div id="works" className="space-y-6">
@@ -46,7 +45,7 @@ const Works = () => {
           <div className="embla__container flex">
             {works.map(({ src }, index) => (
               <div className="embla__slide min-w-0" key={index}>
-                <div className="embla__slide__number aspect-h-3 aspect-w-4 overflow-hidden rounded-md border border-gray-800">
+                <div className="embla__slide__number aspect-h-3 aspect-w-4 overflow-hidden rounded-md border border-border">
                   <Image
                     src={src}
                     alt="my work"

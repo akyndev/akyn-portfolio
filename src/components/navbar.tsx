@@ -8,18 +8,20 @@ import {
 import { useInnerWidth } from "@/lib/hooks/useInnerWidth";
 import { cubicBezier, motion, useScroll, useTransform } from "framer-motion";
 import {
+  FileText,
   Folders,
   Heart,
   House,
   Layers,
   Lightbulb,
   Moon,
-  MousePointer2,
   Sun,
   WalletCards,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { useState } from "react";
+import { Resume } from "./resume";
 
 const navIcons = [
   {
@@ -60,7 +62,7 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const { scrollYProgress } = useScroll();
   const { x } = useInnerWidth() as { x: number };
-
+  const [open, setOpen] = useState(false);
   const bottom = useTransform(
     scrollYProgress,
     // Map x from these values:
@@ -79,73 +81,80 @@ const Navbar = () => {
   );
 
   return (
-    <motion.div
-      style={{ bottom: x < 640 ? 18 : bottom, opacity: x < 640 ? 1 : opacity }}
-      className="fixed inset-x-0"
-    >
-      <div className="flex items-center justify-center gap-1.5 sm:scale-100 sm:gap-3">
-        <div
-          className="rounded-lg border border-border bg-nav/70 shadow-lg blur-[.2px] backdrop-blur-2xl"
-          onClick={() => {
-            if (theme === "dark") setTheme("light");
-            else setTheme("dark");
-          }}
-        >
-          <TooltipProvider delayDuration={50}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="cursor-pointer p-3 opacity-50">
-                  {theme !== "light" ? (
-                    <Sun strokeWidth={2} size={20} />
-                  ) : (
-                    <Moon strokeWidth={2} size={20} />
-                  )}
-                </div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Change theme</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </div>
-        <div className="flex items-center rounded-lg border border-border bg-nav/70 shadow-lg blur-[.2px] backdrop-blur-2xl">
-          {navIcons.map((nav) => (
-            <TooltipProvider key={nav.link} delayDuration={50}>
+    <>
+      <motion.div
+        style={{
+          bottom: x < 640 ? 18 : bottom,
+          opacity: x < 640 ? 1 : opacity,
+        }}
+        className="fixed inset-x-0"
+      >
+        <div className="flex items-center justify-center gap-1.5 sm:scale-100 sm:gap-3">
+          <div
+            className="rounded-lg border border-border bg-nav/70 shadow-lg blur-[.2px] backdrop-blur-2xl"
+            onClick={() => {
+              if (theme === "dark") setTheme("light");
+              else setTheme("dark");
+            }}
+          >
+            <TooltipProvider delayDuration={50}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
-                    href={nav.link}
-                    className="cursor-pointer p-3 opacity-50"
-                  >
-                    {nav.icon}
-                  </Link>
+                  <div className="cursor-pointer p-3 opacity-50">
+                    {theme !== "light" ? (
+                      <Sun strokeWidth={2} size={20} />
+                    ) : (
+                      <Moon strokeWidth={2} size={20} />
+                    )}
+                  </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>{nav.label}</p>
+                  <p>Change theme</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-          ))}
-        </div>
+          </div>
+          <div className="flex items-center rounded-lg border border-border bg-nav/70 shadow-lg blur-[.2px] backdrop-blur-2xl">
+            {navIcons.map((nav) => (
+              <TooltipProvider key={nav.link} delayDuration={50}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={nav.link}
+                      className="cursor-pointer p-3 opacity-50"
+                    >
+                      {nav.icon}
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{nav.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            ))}
+          </div>
 
-        <div className="rounded-lg border border-border bg-nav/70 shadow-lg blur-[.2px] backdrop-blur-2xl">
-          <TooltipProvider delayDuration={50}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link href={""}>
+          <div
+            onClick={() => setOpen(true)}
+            className="rounded-lg border border-border bg-nav/70 shadow-lg blur-[.2px] backdrop-blur-2xl"
+          >
+            <TooltipProvider delayDuration={50}>
+              <Tooltip>
+                <TooltipTrigger asChild>
                   <div className="cursor-pointer p-3 opacity-50">
-                    <MousePointer2 strokeWidth={2} size={20} />
+                    <FileText strokeWidth={2} size={20} />
                   </div>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Fork</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Resume</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+      <Resume open={open} setOpen={setOpen} />
+    </>
   );
 };
 

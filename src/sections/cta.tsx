@@ -1,8 +1,10 @@
+"use client";
 import HotKeys from "@/components/hot-keys";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { PiHandWavingLight } from "react-icons/pi";
+import Akyn from "/public/images/wrebble.png";
 
 const CTA = () => {
   return (
@@ -21,7 +23,9 @@ const CTA = () => {
               </p>
             </div>
             <div className="pt-3">
-              <Button className="mr-3">Get In Touch</Button>
+              <Button className="mr-3">
+                Get In Touch
+              </Button>
               <HotKeys keyName="s">
                 Or press{" "}
                 <span className="cursor-pointer rounded border border-border bg-neutral-200 px-1.5 py-0.5 text-foreground dark:bg-neutral-800">
@@ -33,9 +37,7 @@ const CTA = () => {
         </CardContent>
         <div className="w-54 -bottom-16 -right-16 h-full overflow-hidden rounded-lg border border-border transition-all duration-500 ease-in-out group-hover:-bottom-12 group-hover:-right-12 sm:absolute">
           <Image
-            src={
-              "https://framerusercontent.com/images/9wKpHKP6GEyr175Kqt41hBKKY.jpg?scale-down-to=1024"
-            }
+            src={Akyn}
             alt="my work"
             sizes="100%"
             width={1024}

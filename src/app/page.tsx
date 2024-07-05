@@ -13,7 +13,7 @@ import Works from "@/sections/works";
 
 export default function Home() {
   return (
-    <main className="py-6 pb-24">
+    <main className="py-6 pt-14 pb-24">
       {/* <ModeToggle /> */}
       <Header />
       <div className="space-y-16">

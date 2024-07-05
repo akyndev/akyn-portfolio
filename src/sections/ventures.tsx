@@ -5,13 +5,13 @@ import {
 } from "@tabler/icons-react";
 import { Lightbulb } from "lucide-react";
 import Image from "next/image";
-
+import WrebblePort from "/public/images/wrebble-port.png";
 const Ventures = () => {
   return (
     <div id="ventures">
       <SectionHeader
         label="ventures"
-        description="Projects I'm currently working on"
+        description="Projects I'm currently working on."
       >
         <Lightbulb strokeWidth={1} />
       </SectionHeader>
@@ -35,9 +35,7 @@ export default Ventures;
 const Skeleton = () => (
   <div className="aspect-h-6 aspect-w-16 flex flex-1 overflow-hidden rounded-xl border-border bg-card text-card-foreground">
     <Image
-      src={
-        "https://framerusercontent.com/images/9wKpHKP6GEyr175Kqt41hBKKY.jpg?scale-down-to=1024"
-      }
+      src={WrebblePort}
       alt="my work"
       sizes="100%"
       width={1024}

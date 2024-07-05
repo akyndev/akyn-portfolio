@@ -17,7 +17,7 @@ const Template = ({ children }: { children: React.ReactNode }) => {
     requestAnimationFrame(raf);
   }, []);
 
-  return <>{children}</>;
+  return <motion.div>{children}</motion.div>;
 };
 
 export default Template;

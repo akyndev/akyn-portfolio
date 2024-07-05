@@ -47,7 +47,7 @@ const TechStack = () => {
     <div id="tech-stack">
       <SectionHeader
         label="tech stack"
-        description="Projects I'm currently working on"
+        description="Some of the tools I use in my workflow."
       >
         <Layers strokeWidth={1} />
       </SectionHeader>

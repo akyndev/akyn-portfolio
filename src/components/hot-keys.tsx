@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import Hotkeys from "react-hot-keys";
 
 const HotKeys = ({
@@ -8,11 +9,18 @@ const HotKeys = ({
   children: React.ReactNode;
   keyName: string;
 }) => {
+  const router = useRouter();
+
   return (
     <Hotkeys
       keyName={keyName}
-      onKeyUp={() => {
-        alert("pressed");
+      onKeyUp={(key) => {
+        if (key === "s") {
+          router.push("mailto:akinlade3880@gmail.com");
+        }
+        if (key === "h") {
+          router.push("/");
+        }
       }}
     >
       {children}

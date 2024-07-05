@@ -1,3 +1,4 @@
+import { Plus } from "lucide-react";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -15,9 +16,11 @@ export function DialogDemo() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+         <Button className="w-max h-max px-1 py-0 rounded">
+            <Plus className="mr-2 h-4 w-4" /> More
+          </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="w-[768px] h-[600px]">
         <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
