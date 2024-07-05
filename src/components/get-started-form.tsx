@@ -1,4 +1,3 @@
-import { useFormState } from "@/lib/utils";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -12,10 +11,9 @@ import {
 // import { Label } from "./ui/label";
 
 export function GetStarted() {
-  const { isOpen, setIsOpen } = useFormState();
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog >
       <DialogContent className="w-[768px]">
         <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>

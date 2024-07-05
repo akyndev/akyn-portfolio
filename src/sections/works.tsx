@@ -4,7 +4,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import { CloudCog } from "lucide-react";
 import Image from "next/image";
 import Akyn from "/public/images/akyn.png";
-import New from "/public/images/home-port.jpg";
 import WrebblePort from "/public/images/wrebble-port.png";
 import Wrebble from "/public/images/wrebble.png";
 
