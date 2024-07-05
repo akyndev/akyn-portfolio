@@ -9,7 +9,7 @@ import Wrebble from "/public/images/wrebble.png";
 
 const works = [
   {
-    src: New,
+    src: Wrebble,
     alt: "My work",
   },
   {
