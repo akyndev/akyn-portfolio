@@ -9,9 +9,16 @@ const NotfoundPage = () => {
   return (
     <div className="relative h-screen w-full">
       <motion.div
-        initial={{ scale: 0.8, opacity: 0, x: "-50%", y: "-50%", left: "50%", top: "50%" }}
+        initial={{
+          scale: 0.8,
+          opacity: 0,
+          x: "-50%",
+          y: "-50%",
+          left: "50%",
+          top: "50%",
+        }}
         animate={{ scale: 1, opacity: 1 }}
-        className="absolute rounded-lg border border-border text-white bg-black/30 w-max p-10 backdrop-blur-sm z-50"
+        className="absolute z-50 w-max rounded-lg border border-border bg-black/30 p-10 text-white backdrop-blur-sm"
       >
         <h2 className="text-lg">Sorry, this page doesn&apos;t exist :( </h2>
         <div>
@@ -19,7 +26,7 @@ const NotfoundPage = () => {
             <Link href={"/"}>
               <Button className="mr-3">Go Back Home</Button>
             </Link>
-            <HotKeys keyName="h">
+            <HotKeys link="/" keyName="h">
               Or press{" "}
               <span className="cursor-pointer rounded border border-border bg-neutral-200 px-1.5 py-0.5 text-foreground dark:bg-neutral-800">
                 H

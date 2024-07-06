@@ -1,6 +1,5 @@
 "use client";
-import HotKeys from "@/components/hot-keys";
-import { Button } from "@/components/ui/button";
+import { GetStartForm } from "@/components/get-started-form";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { PiHandWavingLight } from "react-icons/pi";
@@ -23,15 +22,13 @@ const CTA = () => {
               </p>
             </div>
             <div className="pt-3">
-              <Button className="mr-3">
-                Get In Touch
-              </Button>
-              <HotKeys keyName="s">
-                Or press{" "}
-                <span className="cursor-pointer rounded border border-border bg-neutral-200 px-1.5 py-0.5 text-foreground dark:bg-neutral-800">
-                  S
-                </span>
-              </HotKeys>
+              <span className="mr-3">
+                <GetStartForm />
+              </span>
+              Or press{" "}
+              <span className="cursor-pointer rounded border border-border bg-neutral-200 px-1.5 py-0.5 text-foreground dark:bg-neutral-800">
+                S
+              </span>
             </div>
           </div>
         </CardContent>

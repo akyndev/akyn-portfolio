@@ -1,4 +1,4 @@
-import { FileText } from "lucide-react";
+import { Dispatch, SetStateAction } from "react";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -7,24 +7,38 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "./ui/dialog";
-import { Dispatch, SetStateAction } from "react";
-// import { Input } from "./ui/input";
-// import { Label } from "./ui/label";
 
-export function Resume( {open, setOpen}: { open: boolean, setOpen: Dispatch<SetStateAction<boolean>>}) {
+export function Resume({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  }) {
+  
+  
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="w-[768px]">
+    <Dialog  open={open} onOpenChange={setOpen}>
+      <DialogContent className="w-11/12 sm:max-w-[640px]">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>About my career</DialogTitle>
           <DialogDescription>
             Make changes to your profile here. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
+        <ul>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <li key={i} className="p-2">
+              home
+            </li>
+          ))}
+        </ul>
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
+          <Button type="submit">Let&apos;s talk</Button>
+          {/* <DialogClose>
+            close
+        </DialogClose> */}
         </DialogFooter>
       </DialogContent>
     </Dialog>

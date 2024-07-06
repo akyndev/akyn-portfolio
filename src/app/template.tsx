@@ -6,7 +6,9 @@ import Lenis from "lenis";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      prevent: (node) => node.id === "modal",
+    });
 
     const raf = (time: number) => {
       lenis.raf(time);

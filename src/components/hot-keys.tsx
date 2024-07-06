@@ -1,30 +1,35 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Hotkeys from "react-hot-keys";
+import { useRef } from "react";
+import { useHotkeys } from "react-hotkeys-hook";
+
+let hotkeyActionExecuted = false;
 
 const HotKeys = ({
   children,
   keyName,
+  link,
 }: {
   children: React.ReactNode;
   keyName: string;
+  link: string;
 }) => {
   const router = useRouter();
 
+  const ref = useRef<HTMLAnchorElement | null>(null);
+
+  useHotkeys(
+    keyName,
+    () => {
+      if (ref.current) ref.current.click();
+    },
+    { keyup: true },
+  );
+
   return (
-    <Hotkeys
-      keyName={keyName}
-      onKeyUp={(key) => {
-        if (key === "s") {
-          router.push("mailto:akinlade3880@gmail.com");
-        }
-        if (key === "h") {
-          router.push("/");
-        }
-      }}
-    >
+    <a href={link} ref={ref}>
       {children}
-    </Hotkeys>
+    </a>
   );
 };
 

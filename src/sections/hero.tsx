@@ -1,6 +1,6 @@
-"use client"
+"use client";
+import { GetStartForm } from "@/components/get-started-form";
 import HotKeys from "@/components/hot-keys";
-import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -16,19 +16,21 @@ const Hero = () => {
             </h2>
           </div>
           <p className="text-foreground/80">
-            I am Joseph Akinlade, a web developer focusing on
-            website creation and web animations. I have a strong passion for
-            designing digital solutions that engage users, with expertise in
-            user-centric design and strategic optimization. My goal is to
-            continuously learn and evolve, aiming to become a valued
-            collaborator in the online business landscape.
+            I am Joseph Akinlade, a web developer focusing on website creation
+            and web animations. I have a strong passion for designing digital
+            solutions that engage users, with expertise in user-centric design
+            and strategic optimization. My goal is to continuously learn and
+            evolve, aiming to become a valued collaborator in the online
+            business landscape.
           </p>
         </div>
 
         <div>
-          <Button className="visible md:hidden">Get Started</Button>
+          <div className="visible md:hidden">
+            <GetStartForm />
+          </div>
           <div className="hidden md:block">
-            <HotKeys keyName="s">
+            <HotKeys keyName="s" link="mailto:akinladeirede@gmail.com">
               Press{" "}
               <span className="cursor-pointer rounded border border-border bg-neutral-200 px-1.5 py-0.5 text-foreground dark:bg-neutral-800">
                 S
