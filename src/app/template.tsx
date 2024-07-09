@@ -1,14 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Lenis from "lenis";
+import React, { useEffect } from "react";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
-    const lenis = new Lenis({
-      prevent: (node) => node.id === "modal",
-    });
+    const lenis = new Lenis();
 
     const raf = (time: number) => {
       lenis.raf(time);

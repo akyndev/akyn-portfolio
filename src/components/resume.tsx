@@ -21,7 +21,7 @@ export function Resume({
       <DialogContent className="w-11/12 p-4 sm:max-w-[640px]">
         <DialogHeader>
           <DialogTitle className="text-left capitalize">
-            👋 Nice to see you here, I&apos;m Joseph Akinlade
+            👋 Nice to see you here, I&apos;m Joseph
           </DialogTitle>
           <DialogDescription className="px-4 text-left">
             I am Joseph Akinlade, a web developer focusing on website creation

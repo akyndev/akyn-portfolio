@@ -1,25 +1,21 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { siteConfig } from "../seo";
 import { general_sans } from "./font";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Joseph Akinlade",
-  description:
-    "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences.",
+  title: siteConfig.name,
+  description: siteConfig.description,
   generator: "Akyn",
   applicationName: "Akyn portfolio",
   referrer: "origin-when-cross-origin",
-  keywords: ["Next.js", "React", "JavaScript", "framer"],
-  authors: [{ name: "Joseph Akinlade", url: "https://akyn.dev" }],
-  creator: "Joseph Akinlade",
-  publisher: "Joseph Akinlade",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.owner, url: siteConfig.url }],
+  creator: siteConfig.owner,
+  publisher: siteConfig.owner,
+
   icons: {
     icon: [
       { url: "/icon.png" },
@@ -52,10 +48,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Joseph Akinlade",
-    description:
-      "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences.",
-    url: "https://akyn.dev",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
     siteName: "Akyn",
     images: [
       {
@@ -75,9 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "app",
-    title: "Joseph Akinlade",
-    description:
-      "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences.",
+    title: siteConfig.name,
+    description: siteConfig.description,
     siteId: "1463402446688972801",
     creator: "@akyndev",
     creatorId: "1463402446688972801",

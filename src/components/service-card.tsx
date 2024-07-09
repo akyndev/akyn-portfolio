@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import { GetStartForm } from "./get-started-form";
 import { ServiceDialog } from "./service-dialog";
@@ -34,7 +35,9 @@ const ServiceCard = ({ description, price, title, icon }: ServiceCardProps) => {
           <div className="">
             <GetStartForm />
           </div>
-          <Button variant={"outline"}>Book a Call</Button>
+          <Link href={"https://calendly.com/akinladeirede/30min"} target="_blank">
+            <Button variant={"outline"}>Book a Call</Button>
+          </Link>
         </div>
       </CardContent>
     </Card>
