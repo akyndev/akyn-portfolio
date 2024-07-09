@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Joseph Akinlade",
   description:
-    "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences." ,
+    "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences.",
   generator: "Akyn",
   applicationName: "Akyn portfolio",
   referrer: "origin-when-cross-origin",
@@ -53,7 +53,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Joseph Akinlade",
-    description: "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences.",
+    description:
+      "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences.",
     url: "https://akyn.dev",
     siteName: "Akyn",
     images: [
@@ -75,10 +76,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "app",
     title: "Joseph Akinlade",
-    description: "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences.",
-    siteId: "1467726470533754880",
+    description:
+      "Web developer skilled in Framer, Next.js, React, TypeScript, and JavaScript. Specializing in dynamic, high-performance web applications with a focus on interactive design and seamless user experiences.",
+    siteId: "1463402446688972801",
     creator: "@akyndev",
-    creatorId: "1467726470533754880",
+    creatorId: "1463402446688972801",
     images: {
       url: "https://nextjs.org/og.png",
       alt: "Next.js Logo",

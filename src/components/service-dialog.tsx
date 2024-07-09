@@ -43,9 +43,6 @@ export function ServiceDialog({ title, icon }: ServiceDialogProps) {
                 </div>
               ))}
             </div>
-            <Button className="w-44" type="submit">
-              Let&apos;s talk
-            </Button>
           </div>
         </ScrollArea>
         {/* <DialogFooter>
