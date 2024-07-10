@@ -52,7 +52,7 @@ export function Resume({
             <h2 className="pb-2 font-semibold capitalize">My email: </h2>
             <div className="flex items-center justify-start gap-3 px-4 text-sm">
               <Link href={"https://www.instagram.com/akyndev/"}>
-                Akinlade3880@gmail.com
+                akinladeirede@gmail.com
               </Link>
             </div>
           </li>
@@ -67,13 +67,13 @@ export function Resume({
                 <h3>Fullstack developer at Wrebble</h3>
               </li>
               <li className="flex items-center gap-4">
-                <span className="text-muted-foreground">2024 - now</span>
+                <span className="text-muted-foreground">2023 - now</span>
                 <h3>Web developer for Akyn templates</h3>
               </li>
             </ul>
           </li>
 
-          <li>
+          {/* <li>
             <h2 className="pb-2 font-semibold capitalize">My recent blog: </h2>
             <ul className="space-y-3 px-4 text-sm">
               <li className="flex items-center gap-4">
@@ -83,7 +83,7 @@ export function Resume({
                 Why I use OKLCH color for my application 
               </li>
             </ul>
-          </li>
+          </li> */}
         </ul>
       </DialogContent>
     </Dialog>

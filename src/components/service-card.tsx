@@ -16,7 +16,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ description, price, title, icon }: ServiceCardProps) => {
   return (
-    <Card className="w-full p-6">
+    <Card className="w-full p-6 transition duration-200 hover:shadow-xl">
       <CardContent className="flex flex-col gap-4 p-0">
         <div className="flex items-center justify-between pb-2">
           {icon}
@@ -35,7 +35,10 @@ const ServiceCard = ({ description, price, title, icon }: ServiceCardProps) => {
           <div className="">
             <GetStartForm />
           </div>
-          <Link href={"https://calendly.com/akinladeirede/30min"} target="_blank">
+          <Link
+            href={"https://calendly.com/akinladeirede/30min"}
+            target="_blank"
+          >
             <Button variant={"outline"}>Book a Call</Button>
           </Link>
         </div>

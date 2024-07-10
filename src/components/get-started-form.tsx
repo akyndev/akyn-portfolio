@@ -23,18 +23,20 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
 const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  name: z.string().min(3, {
+    message: "Name must be at least 3 characters.",
   }),
   email: z.string().email("Must be a email"),
-  message: z.string(),
+  message: z.string().min(40, {
+    message: "Message must be at least 40 characters.",
+  }),
 });
 
 export function GetStartForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      name: "",
       email: "",
       message: "",
     },
@@ -50,11 +52,6 @@ export function GetStartForm() {
         body: JSON.stringify(values),
       });
 
-      if (!response.ok) {
-        console.log("falling over");
-        throw new Error(`response status: ${response.status}`);
-      }
-      const responseData = await response.json();
       form.reset();
     } catch (err) {
       console.error(err);
@@ -78,16 +75,17 @@ export function GetStartForm() {
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="items-center gap-x-6 space-y-6 sm:flex sm:space-y-0">
+            <div className="items-start gap-x-6 space-y-6 sm:flex sm:space-y-0">
               <FormField
                 control={form.control}
-                name="username"
+                name="name"
                 render={({ field }) => (
                   <FormItem className="w-full">
                     <FormLabel>Name</FormLabel>
                     <FormControl>
                       <Input placeholder="John Doe" {...field} />
                     </FormControl>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -100,6 +98,7 @@ export function GetStartForm() {
                     <FormControl>
                       <Input placeholder="johndoe@example.com" {...field} />
                     </FormControl>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -112,8 +111,9 @@ export function GetStartForm() {
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
-                      className="max-h-56"
+                      className="h-44 max-h-56"
                       placeholder="Type your message here."
+                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
@@ -121,7 +121,7 @@ export function GetStartForm() {
               )}
             />
             <Button className="w-32" type="submit">
-              Submit
+              {form.formState.isSubmitting ? "Sending..." : "Send"}
             </Button>
           </form>
         </Form>

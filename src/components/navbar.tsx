@@ -5,7 +5,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useInnerWidth } from "@/lib/hooks/useInnerWidth";
+import { useInnerWidth } from "@/lib/hooks/use-inner-width";
 import { cubicBezier, motion, useScroll, useTransform } from "framer-motion";
 import {
   FileText,

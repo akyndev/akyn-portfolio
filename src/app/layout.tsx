@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   creator: siteConfig.owner,
   publisher: siteConfig.owner,
   authors: [{ name: siteConfig.owner, url: siteConfig.url }],
+  metadataBase: new URL("https://akyn.dev"),
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,

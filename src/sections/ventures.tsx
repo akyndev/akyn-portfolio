@@ -45,8 +45,8 @@ const Skeleton = () => (
   </div>
 );
 const item = {
-  title: "The Power of Communication",
-  description: "Understand the impact of effective communication in our lives.",
+  title: "The Power of Digital Marketing",
+  description: "Understand the effectiveness of Digital marketing in our community",
   header: <Skeleton />,
   icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
 };

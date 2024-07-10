@@ -31,9 +31,19 @@ const testimonials = [
     name: "Joshua Akinlade",
     title: "Photographer",
     testimonial:
-      "Akyn has transformed my photography portfolio. It's now sleek design and intuitive interface make presenting my work effortless. It strikes a perfect balance between elegance and functionality, elevating my photography to new heights.",
+      "Akyn has transformed my photography portfolio. It's now a sleek design making my work presentation effortless. It strikes a perfect balance between elegance and functionality, elevating my photography to new heights.",
     rating: 5,
     fallback: "JA",
+  },
+  {
+    image:
+      "https://pbs.twimg.com/profile_images/1771588720317059072/s_lORNLt_400x400.jpg",
+    name: "ClintonGuy",
+    title: "UI & UX Designer",
+    testimonial:
+      "I've had the pleasure of working with Akyn on a recent web development project. Akyn's proficiency is top notch and was instrumental in bringing  visions to life.",
+    rating: 5,
+    fallback: "CC",
   },
 ];
 
@@ -121,7 +131,7 @@ const Testimonials = () => {
                 >
                   <Avatar className="h-8 w-8">
                     <AvatarImage src={client.image} alt="@shadcn" />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarFallback>{client.fallback}</AvatarFallback>
                   </Avatar>
                 </div>
               ))}

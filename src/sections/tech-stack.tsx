@@ -6,7 +6,7 @@ import Framer from "/public/framer.svg";
 import VSCode from "/public/vscode.svg";
 import Supabase from "/public/supabase.svg";
 import Python from "/public/python.svg";
-import Typescript from "/public/typescript.svg";
+import Typescript from "/public/webflow.svg";
 import Image from "next/image";
 
 const techStack = [
@@ -27,7 +27,7 @@ const techStack = [
   },
   {
     logo: Typescript,
-    label: "Typescript",
+    label: "Webflow",
     description: "website builder",
   },
   {
@@ -57,7 +57,7 @@ const TechStack = () => {
           {techStack.map((_, index) => (
             <div
               key={index}
-              className="flex cursor-pointer rounded-lg border border-border bg-card p-2 blur-[.2px] transition-transform duration-300 ease-in-out hover:scale-[105%] sm:p-3"
+              className="flex rounded-lg border border-border bg-card p-2 blur-[.2px] transition-transform duration-300 ease-in-out hover:scale-[103%] hover:shadow-sm sm:p-3"
             >
               <div className="flex items-center justify-center gap-3">
                 <div className="h-9 w-9">

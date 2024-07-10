@@ -1,20 +1,27 @@
 import { EmailTemplate } from "@/components/email-template";
+import { NextRequest } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY as string);
 
-export async function POST() {
+export async function POST(request: NextRequest) {
+  const { name, email, message } = await request.json();
+  if (!name || !email || !message)
+    return Response.json(
+      { error: "You need to provide a name" },
+      { status: 400 },
+    );
   try {
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: `${name} <onboarding@resend.dev>`,
       to: ["akinladeirede@gmail.com"],
       subject: "Hello world",
-      react: EmailTemplate({ firstName: "John" }),
+      react: EmailTemplate({ name, email, message }),
       text: "",
     });
 
-      if (error) {
-        console.log(error)
+    if (error) {
+      console.log(error);
       return Response.json({ error }, { status: 500 });
     }
 

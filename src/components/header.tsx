@@ -12,13 +12,13 @@ const Header = () => {
         <div className="flex items-center justify-center gap-3">
           <Avatar>
             <AvatarImage src="https://github.com/akyndev.png" alt="@akyndev" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarFallback>JA</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col justify-center overflow-hidden">
             <h2 className="font-medium leading-5">Joseph Akinlade</h2>
             <p className="text-xs text-[#7D7D7D] sm:text-sm">
-              Designer, Develop, Footballer
+              Designer, Developer, Footballer
             </p>
           </div>
         </div>
