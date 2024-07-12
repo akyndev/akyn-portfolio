@@ -4,8 +4,7 @@ import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import { ScrollArea } from "./ui/scroll-area";
 import { Separator } from "./ui/separator";
-import Wrebble from "/public/images/wrebble.png";
-
+import Wrebble from "/public/images/wrebble.png"
 interface ServiceDialogProps {
   title: string;
   icon: React.ReactNode;
@@ -45,8 +44,7 @@ export function ServiceDialog({ title, icon }: ServiceDialogProps) {
             </div>
           </div>
         </ScrollArea>
-        {/* <DialogFooter>
-        </DialogFooter> */}
+
       </DialogContent>
     </Dialog>
   );

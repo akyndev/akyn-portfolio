@@ -16,34 +16,31 @@ import React from "react";
 
 const testimonials = [
   {
-    image:
-      "https://pbs.twimg.com/profile_images/1765530182557810688/1ULu-32X_400x400.jpg",
-    name: "Pwecious",
-    title: "Designer",
+    image: "https://github.com/akyndev.png",
+    name: "John",
+    title: "Developer",
     testimonial:
-      "My experience with the Akyn's Template has been truly exceptional. This template has not only elevated the visual appeal of my portfolio but also streamlined the way I showcase my work online.",
+      "No reviews yet will use Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptate ducimus, aut nam autem iure earum expedita fugiat aspernatur veritatis, consequatur rem voluptatum, facilis necessitatibus consequuntur tempore itaque eum cumque?",
     rating: 5,
-    fallback: "PW",
+    fallback: "JO",
   },
   {
-    image:
-      "https://pbs.twimg.com/profile_images/1507087868757483534/ayHdm8f9_400x400.jpg",
-    name: "Joshua Akinlade",
-    title: "Photographer",
+    image: "https://github.com/akyndev.png",
+    name: "Doe",
+    title: "Blogger",
     testimonial:
-      "Akyn has transformed my photography portfolio. It's now a sleek design making my work presentation effortless. It strikes a perfect balance between elegance and functionality, elevating my photography to new heights.",
+      "No reviews yet will use Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptate ducimus, aut nam autem iure earum expedita fugiat aspernatur veritatis, consequatur rem voluptatum, facilis necessitatibus consequuntur tempore itaque eum cumque?",
     rating: 5,
-    fallback: "JA",
+    fallback: "DO",
   },
   {
-    image:
-      "https://pbs.twimg.com/profile_images/1771588720317059072/s_lORNLt_400x400.jpg",
-    name: "ClintonGuy",
-    title: "UI & UX Designer",
+    image: "https://github.com/akyndev.png",
+    name: "John doe",
+    title: "Gamer",
     testimonial:
-      "I've had the pleasure of working with Akyn on a recent web development project. Akyn's proficiency is top notch and was instrumental in bringing  visions to life.",
+      "No reviews yet will use Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptate ducimus, aut nam autem iure earum expedita fugiat aspernatur veritatis, consequatur rem voluptatum, facilis necessitatibus consequuntur tempore itaque eum cumque?",
     rating: 5,
-    fallback: "CC",
+    fallback: "JD",
   },
 ];
 

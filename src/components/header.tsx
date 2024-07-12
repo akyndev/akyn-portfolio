@@ -16,7 +16,7 @@ const Header = () => {
           </Avatar>
 
           <div className="flex flex-col justify-center overflow-hidden">
-            <h2 className="font-medium leading-5">Joseph Akinlade</h2>
+            <h2 className="font-medium leading-5">Akyn</h2>
             <p className="text-xs text-[#7D7D7D] sm:text-sm">
               Designer, Developer, Footballer
             </p>

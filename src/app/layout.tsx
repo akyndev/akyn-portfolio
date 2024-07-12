@@ -1,37 +1,12 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/seo";
 import type { Metadata } from "next";
 import { general_sans } from "./font";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
-  description: siteConfig.description,
-  generator: siteConfig.owner,
-  applicationName: siteConfig.name,
-  referrer: "origin-when-cross-origin",
-  keywords: siteConfig.keywords,
-  creator: siteConfig.owner,
-  publisher: siteConfig.owner,
-  authors: [{ name: siteConfig.owner, url: siteConfig.url }],
-  metadataBase: new URL("https://akyn.dev"),
-  openGraph: {
-    title: siteConfig.title,
-    description: siteConfig.description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteId: "1463402446688972801",
-    creator: "@akyndev",
-    creatorId: "1463402446688972801",
-  },
+  title: "akyn - portfolio",
+  description: "A portfolio template for developer ",
 };
 
 export default function RootLayout({
@@ -43,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn("", general_sans.className)}
-        suppressHydrationWarning={true}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"

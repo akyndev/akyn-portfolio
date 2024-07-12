@@ -21,7 +21,6 @@ import {
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
-import { Resume } from "./resume";
 
 const navIcons = [
   {
@@ -141,19 +140,20 @@ const Navbar = () => {
             <TooltipProvider delayDuration={50}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <div className="cursor-pointer p-3 opacity-50">
-                    <FileText strokeWidth={2} size={20} />
-                  </div>
+                  <Link href={"https://github.com"}>
+                    <div className="p-3 opacity-50">
+                      <FileText strokeWidth={2} size={20} />
+                    </div>
+                  </Link>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Resume</p>
+                  <p>Fork</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
           </div>
         </div>
       </motion.div>
-      <Resume open={open} setOpen={setOpen} />
     </>
   );
 };

@@ -36,7 +36,7 @@ const ServiceCard = ({ description, price, title, icon }: ServiceCardProps) => {
             <GetStartForm />
           </div>
           <Link
-            href={"https://calendly.com/akinladeirede/30min"}
+            href={"https://calendly.com/"}
             target="_blank"
           >
             <Button variant={"outline"}>Book a Call</Button>
